@@ -29,20 +29,22 @@ const Cryptos = () => {
     const resultados = !busqueda ? dataCryptos : dataCryptos.filter((crypto) => crypto.name.toLowerCase().includes(busqueda.toLocaleLowerCase())) 
 
   return (
-    <>
+    <>  
+        <div className="">
+
         <input value={busqueda} onChange={buscador} type='text' placeholder='Buscar Crypto...' className='form-control' />
 
         <table className='table table-dark table-hover mt-3'>
             <thead>
                 <tr>
-                    <th>Ranking</th>
+                    <th>Ran</th>
                     <th>Nombre</th>
-                    <th>Simbolo</th>
+                    <th>Sim</th>
                     <th>Precio</th>
-                    <th>Precio 24hs</th>
+                    <th>P 24hs</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="">
                 {resultados.map(crypto=> (
                     <tr key={crypto.id}>
                         <td>#{crypto.market_cap_rank}</td>
@@ -63,6 +65,7 @@ const Cryptos = () => {
 
 
         </table>
+        </div>
     </>
 
   )
