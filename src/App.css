@@ -3,3 +3,39 @@
   width: 18px;
   height: auto;
 }
+
+.text {
+	font-size: 16px;
+	text-transform: uppercase;
+	line-height: 32px;
+	letter-spacing: 8px;
+	color: #a8a8a8;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	width: 100%;
+	transform: translate(-50% -50%);
+}
+.shape {
+	stroke-dasharray: 140 540;
+	stroke-dashoffset: -474;
+	stroke-width: 8px;
+	fill: transparent;
+	stroke: #a8a8a8;
+	border: 5px solid black;
+	animation: 3s ease 0s 1 pageLoad;
+}
+
+
+@keyframes pageLoad {
+	0% {
+		stroke-dasharray: 140 540;
+		stroke-dashoffset: -474;
+		stroke-width: 8px;
+	}
+	100% {
+		stroke-width: 2px;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 760;
+	}
+}
